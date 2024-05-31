@@ -1,4 +1,4 @@
-# Rinha2024
+# Rinha
 
 **TODO: Add description**
 

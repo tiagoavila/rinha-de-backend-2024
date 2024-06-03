@@ -4,19 +4,22 @@ defmodule Rinha.Application do
   @moduledoc false
 
   use Application
-  
+
   alias ElliCallback
+  alias Rinha.ReleaseTasks
 
   @impl true
   def start(_type, _args) do
+    ReleaseTasks.migrate()
+
     children = [
       # Starts a worker by calling: Rinha.Worker.start_link(arg)
       # {Rinha.Worker, arg}
+      Rinha.Repo,
       %{
         id: :elli,
-        start: {:elli, :start_link, [ [ callback: ElliCallback, port: 3000 ]]}
-      },
-      Rinha.Repo
+        start: {:elli, :start_link, [[callback: ElliCallback, port: 4000]]}
+      }
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html

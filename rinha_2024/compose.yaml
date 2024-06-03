@@ -1,0 +1,39 @@
+version: "3.9"
+services:
+
+  db:
+    image: postgres:15.2
+    command: postgres -c 'max_connections=410'
+    environment:
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: rinha_prod
+    ports:
+      - 24041:5432
+    volumes:
+      - rinha_volume:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD", "pg_isready", "--username=postgres"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    deploy:
+      restart_policy:
+        condition: on-failure
+
+  web:
+    image: rinha_2024:latest
+    deploy:
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 3
+        window: 120s
+    environment:
+      DATABASE_URL: ecto://postgres:postgres@db/rinha_prod
+    ports:
+      - 4000:4000
+    depends_on:
+     - db
+
+volumes:
+  rinha_volume:

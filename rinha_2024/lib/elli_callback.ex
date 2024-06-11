@@ -8,6 +8,8 @@ defmodule ElliCallback do
 
   defp do_handle(:GET, [], _req), do: {:ok, "Welcome! I'm running on Docker. I'm awesome!!!"}
 
+  defp do_handle(:POST, ["clientes", id, "transacoes"], req), do: {:ok, "post to id #{id}"}
+
   @impl true
   def handle_event(_event, _data, _args), do: :ok
 end

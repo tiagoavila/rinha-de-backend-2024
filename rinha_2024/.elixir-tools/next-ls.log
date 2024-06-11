@@ -304,3 +304,950 @@ Function: #Function<0.9739460/0 in NextLS.Progress.start/3>
 09:18:46.684 [info] Loading 75 CA(s) from :otp store
 
 18:42:37.422 [info] Loading 75 CA(s) from :otp store
+
+10:10:58.186 [info] Loading 137 CA(s) from :otp store
+
+10:10:58.290 id=0 [debug] handled request client -> server initialize in 67ms
+
+10:10:58.296 [debug] sent notification server -> client window/logMessage
+
+10:10:58.299 [debug] NextLS v0.22.8 has initialized!
+
+10:10:58.300 [debug] sent notification server -> client window/logMessage
+
+10:10:58.300 [debug] Log file located at /home/tiago/dev/elixir/rinha-de-backend-2024/rinha_2024/.elixir-tools/next-ls.log
+
+10:10:58.301 [debug] sent notification server -> client window/logMessage
+
+10:10:58.301 id=66 [debug] sent request server -> client client/registerCapability
+
+10:10:58.301 [info] [extension] Credo initializing with options %NextLS.InitOpts.Extensions.Credo{enable: true, cli_options: []}
+
+10:10:58.738 [debug] sent notification server -> client window/logMessage
+
+10:10:58.738 [warning] Failed to unzip and install the bundled Elixir archive.
+
+** (MatchError) no match of right hand side value: {"{\"init terminating in do_boot\",{undef,[{elixir,start_cli,[],[]},{init,start_em,1,[]},{init,do_boot,3,[]}]}}\r\n", 1}
+    (next_ls 0.22.8) lib/next_ls/runtime/bundled_elixir.ex:49: NextLS.Runtime.BundledElixir.install/2
+    (next_ls 0.22.8) lib/next_ls.ex:902: NextLS.handle_notification/2
+    (gen_lsp 0.10.0) lib/gen_lsp.ex:478: anonymous fn/2 in GenLSP.loop/3
+    (telemetry 1.2.1) /Users/runner/work/next-ls/next-ls/deps/telemetry/src/telemetry.erl:321: :telemetry.span/3
+    (gen_lsp 0.10.0) lib/gen_lsp.ex:474: anonymous fn/7 in GenLSP.loop/3
+    (gen_lsp 0.10.0) lib/gen_lsp.ex:553: GenLSP.attempt/4
+    (stdlib 5.2) proc_lib.erl:241: :proc_lib.init_p_do_apply/3
+
+
+
+10:10:58.738 [debug] sent notification server -> client window/logMessage
+
+10:10:58.738 [debug] Booting runtimes...
+
+10:10:58.776 id=130 [debug] sent request server -> client window/workDoneProgress/create
+
+10:10:58.780 [debug] sent notification server -> client $/progress
+
+10:10:58.786 [debug] sent notification server -> client window/logMessage
+
+10:10:58.787 [info] Beginning DB migration...
+
+10:10:58.796 [debug] sent notification server -> client window/logMessage
+
+10:10:58.796 [info] Database is being upgraded from version 0 to 7.
+
+This will trigger a full recompilation in order to re-index your codebase.
+
+
+10:10:58.797 [debug] sent notification server -> client window/logMessage
+
+10:10:58.797 [info] Finished DB migration...
+
+10:10:58.797 [debug] sent notification server -> client window/logMessage
+
+10:10:58.797 [info] Booting runtime for rinha_2024.
+
+- elixir: /mnt/c/Program Files/Elixir/bin/elixir
+- zombie wrapper script: /home/tiago/dev/.local/share/.burrito/next_ls_erts-14.2.1_0.22.8/lib/next_ls-0.22.8/priv/cmd
+- working_dir: /home/tiago/dev/elixir/rinha-de-backend-2024/rinha_2024
+- command: /mnt/c/Program Files/Elixir/bin/elixir --no-halt --sname nextls-runtime-1718111458797132187 --cookie VSW5V6KTWVUXRC2CHACIXZJ3QA4RP7N55IDNZ4HV5O4DF66HTXBQ==== -S mix loadpaths --no-compile
+
+Environment: 
+
+LSP=nextls
+NEXTLS_PARENT_PID=g1h3JW5leHQtbHMtMTcxODExMTQ1ODE5NTUzNzc0OUBUSUFHT05PVEUAAAEQAAAAAGZoTOM=
+MIX_ENV=dev
+MIX_TARGET=host
+MIX_BUILD_ROOT=.elixir-tools/_build
+ROOTDIR=false
+BINDIR=false
+RELEASE_ROOT=false
+RELEASE_SYS_CONFIG=false
+PATH=/mnt/c/Program Files/Elixir/bin:/home/tiago/dev/.local/share/.burrito/next_ls_erts-14.2.1_0.22.8/bin:/home/tiago/dev/.vscode-server/bin/89de5a8d4d6205e5b11647eb6a74844ca23d2573/bin/remote-cli:/home/tiago/dev/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files (x86)/Common Files/Oracle/Java/javapath:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/mnt/c/Program Files/Microsoft SQL Server/150/Tools/Binn/:/mnt/c/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn/:/mnt/c/Program Files/dotnet/:/mnt/c/Program Files (x86)/NuGet:/mnt/c/Program Files (x86)/Microsoft SQL Server/150/DTS/Binn/:/mnt/c/Program Files/Microsoft SQL Server/150/DTS/Binn/:/mnt/c/Program Files (x86)/Microsoft SQL Server/150/Tools/Binn/:/mnt/c/Program Files/Microsoft SQL Server/Client SDK/ODBC/130/Tools/Binn/:/mnt/c/Program Files (x86)/Microsoft SQL Server/130/Tools/Binn/:/mnt/c/Program Files/Microsoft SQL Server/130/Tools/Binn/:/mnt/c/Program Files/Microsoft SQL Server/130/DTS/Binn/:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/Elixir/bin/mix.bat:/mnt/c/Users/tiago/AppData/Roaming/nvm:/mnt/c/Program Files/nodejs:/mnt/c/Users/tiago/.mix/escripts:/mnt/c/Program Files/Erlang OTP/bin:/mnt/c/Program Files/Elixir/bin:/mnt/c/Program Files/LINQPad7:/mnt/c/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Auxiliary/Build:/mnt/c/Program Files/Elixir/bin:/mnt/c/Program Files/Erlang OTP/bin:/mnt/c/Users/tiago/.cargo/bin:/mnt/c/Users/tiago/AppData/Local/Programs/Python/Python310/Scripts/:/mnt/c/Users/tiago/AppData/Local/Programs/Python/Python310/:/mnt/c/Users/tiago/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/tiago/.dotnet/tools:/mnt/c/Users/tiago/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/tiago/AppData/Roaming/npm:/mnt/c/Program Files/Azure Data Studio/bin:/mnt/c/Program Files/JetBrains/PyCharm Community Edition 2021.3.2/bin:/mnt/c/Exercism:/mnt/c/Program Files/JetBrains/IntelliJ IDEA Community Edition 2022.2.2/bin:/mnt/c/Program Files/JetBrains/JetBrains Rider 2022.3.1/bin:/mnt/c/Users/tiago/AppData/Roaming/nvm:/mnt/c/Program Files/nodejs:/mnt/c/Users/tiago/go/bin:/mnt/c/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Auxiliary/Build/:/mnt/c/Program Files/Azure Data Studio/bin:/mnt/c/Users/tiago/.fly/bin:/mnt/d/cmd_aliases:/mnt/c/Program Files/CodeBlocks/MinGW/bin:/mnt/c/Users/tiago/.dotnet/tools:/mnt/c/Users/tiago/appdata/roaming/python/python38/Scripts:/mnt/c/Program Files/Elixir/bin:/mnt/c/Program Files/Erlang OTP/bin:/mnt/c/Users/tiago/.cargo/bin:/mnt/c/Users/tiago/AppData/Local/Programs/Python/Python310/Scripts/:/mnt/c/Users/tiago/AppData/Local/Programs/Python/Python310/:/mnt/c/Users/tiago/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/tiago/.dotnet/tools:/mnt/c/Users/tiago/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/tiago/AppData/Roaming/npm:/mnt/c/Program Files/Azure Data Studio/bin:/mnt/c/Program Files/JetBrains/PyCharm Community Edition 2021.3.2/bin:/mnt/c/Exercism:/mnt/c/Program Files/JetBrains/IntelliJ IDEA Community Edition 2022.2.2/bin:/mnt/c/Program Files/JetBrains/JetBrains Rider 2022.3.1/bin:/mnt/c/Users/tiago/AppData/Roaming/nvm:/mnt/c/Program Files/nodejs:/mnt/c/Users/tiago/go/bin:/mnt/c/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Auxiliary/Build/:/mnt/c/Program Files/Azure Data Studio/bin:/mnt/c/Users/tiago/.fly/bin:/mnt/d/cmd_aliases:/mnt/c/Program Files/CodeBlocks/MinGW/bin:/mnt/c/Users/tiago/.dotnet/tools:/mnt/c/Users/tiago/AppData/Roaming/Python/Python310/Scripts/gigalixir.exe:/mnt/c/Users/tiago/appdata/roaming/python/Python310/Scripts:/mnt/c/Program Files/Git/cmd:/Docker/host/bin:/mnt/c/Program Files (x86)/Microsoft SQL Server/160/DTS/Binn/:/mnt/c/Program Files/Elixir/bin:/mnt/c/Program Files/Erlang OTP/bin:/mnt/c/Users/tiago/AppData/Local/Programs/Python/Python310/Scripts/:/mnt/c/Users/tiago/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/tiago/.dotnet/tools:/mnt/c/Users/tiago/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/tiago/AppData/Roaming/npm:/mnt/c/Program Files/Azure Data Studio/bin:/mnt/c/Program Files/JetBrains/PyCharm Community Edition 2021.3.2/bin:/mnt/c/Exercism:/mnt/c/Program Files/JetBrains/IntelliJ IDEA Community Edition 2022.2.2/bin:/mnt/c/Program Files/JetBrains/JetBrains Rider 2022.3.1/bin:/mnt/c/Users/tiago/AppData/Roaming/nvm:/mnt/c/Program Files/nodejs:/mnt/c/Users/tiago/go/bin:/mnt/c/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Auxiliary/Build/:/mnt/c/Program Files/Azure Data Studio/bin:/mnt/c/Users/tiago/.fly/bin:/mnt/d/cmd_aliases:/mnt/c/Program Files/CodeBlocks/MinGW/bin:/mnt/c/Users/tiago/.dotnet/tools:/mnt/c/Users/tiago/AppData/Local/Programs/Python/Python310/:/snap/bin
+
+
+10:10:58.797 [debug] handled notification client -> server initialized in 503ms
+
+10:10:58.800 [debug] handled notification client -> server textDocument/didOpen in 2ms
+
+10:10:58.800 [debug] handled notification client -> server textDocument/didOpen in 131µs
+
+10:10:58.809 id=1 [debug] handled request client -> server textDocument/documentSymbol in 8ms
+
+10:10:58.820 id=2 [debug] handled request client -> server textDocument/codeAction in 11ms
+
+10:10:58.822 [debug] handled notification client -> server $/cancelRequest in 2ms
+
+10:10:58.823 [debug] handled notification client -> server $/cancelRequest in 41µs
+
+10:10:59.049 [debug] sent notification server -> client window/logMessage
+
+10:10:59.049 [info] {"init terminating in do_boot",{undef,[{elixir,start_cli,[],[]},{init,start_em,1,[]},{init,do_boot,3,[]}]}}
+init terminating in do_boot ({undef,[{elixir,start_cli,[],[]},{init,start_em,1,[]},{init,do_boot,3,[]}]})
+
+
+10:10:59.050 [debug] sent notification server -> client window/logMessage
+
+10:10:59.051 [info] 
+Crash dump is being written to: erl_crash.dump...
+
+10:10:59.163 [debug] sent notification server -> client window/logMessage
+
+10:10:59.163 [info] done
+
+
+10:10:59.165 [debug] sent notification server -> client $/progress
+
+10:10:59.166 [debug] sent notification server -> client window/logMessage
+
+10:10:59.166 [error] Runtime for folder rinha_2024 failed to initialize
+
+10:10:59.167 [debug] sent notification server -> client window/logMessage
+
+10:10:59.167 [info] The runtime for rinha_2024 has successfully shut down.
+
+10:11:27.197 id=3 [debug] handled request client -> server textDocument/codeAction in 242µs
+
+10:11:27.198 id=4 [debug] handled request client -> server textDocument/documentSymbol in 921µs
+
+10:11:27.488 id=5 [debug] handled request client -> server textDocument/documentSymbol in 797µs
+
+10:11:31.646 id=6 [debug] handled request client -> server textDocument/hover in 1008ms
+
+10:11:31.646 [debug] handled notification client -> server $/cancelRequest in 64µs
+
+10:14:52.051 id=7 [debug] handled request client -> server textDocument/codeAction in 314µs
+
+10:14:53.074 [debug] handled notification client -> server textDocument/didChange in 3ms
+
+10:14:53.075 id=8 [debug] handled request client -> server textDocument/codeAction in 306µs
+
+10:14:53.180 id=9 [debug] handled request client -> server textDocument/documentSymbol in 838µs
+
+10:14:53.181 id=10 [debug] handled request client -> server textDocument/documentSymbol in 1ms
+
+10:14:53.756 [debug] handled notification client -> server textDocument/didChange in 299µs
+
+10:14:53.761 [debug] handled notification client -> server textDocument/didChange in 217µs
+
+10:14:53.762 id=11 [debug] handled request client -> server textDocument/codeAction in 185µs
+
+10:14:53.763 [debug] handled notification client -> server $/cancelRequest in 68µs
+
+10:14:54.435 [debug] handled notification client -> server textDocument/didChange in 255µs
+
+10:14:54.443 id=12 [debug] handled request client -> server textDocument/codeAction in 247µs
+
+10:14:54.534 id=13 [debug] handled request client -> server textDocument/documentSymbol in 841µs
+
+10:14:54.543 id=14 [debug] handled request client -> server textDocument/documentSymbol in 705µs
+
+10:14:55.074 [debug] handled notification client -> server textDocument/didChange in 265µs
+
+10:14:55.075 id=15 [debug] handled request client -> server textDocument/codeAction in 218µs
+
+10:14:55.712 [debug] handled notification client -> server textDocument/didChange in 238µs
+
+10:14:55.713 id=16 [debug] handled request client -> server textDocument/codeAction in 348µs
+
+10:14:55.822 [debug] sent notification server -> client window/logMessage
+
+10:14:55.822 id=17 [debug] handled request client -> server textDocument/documentSymbol in 2ms
+
+10:14:55.823 [debug] sent notification server -> client window/logMessage
+
+10:14:55.823 id=18 [debug] handled request client -> server textDocument/documentSymbol in 556µs
+
+10:14:56.139 [debug] handled notification client -> server textDocument/didChange in 648µs
+
+10:14:56.150 id=19 [debug] handled request client -> server textDocument/codeAction in 337µs
+
+10:14:56.633 [debug] handled notification client -> server textDocument/didChange in 212µs
+
+10:14:56.642 id=20 [debug] handled request client -> server textDocument/codeAction in 288µs
+
+10:14:56.935 [debug] handled notification client -> server textDocument/didChange in 157µs
+
+10:14:56.935 id=21 [debug] handled request client -> server textDocument/codeAction in 213µs
+
+10:14:57.044 id=22 [debug] handled request client -> server textDocument/documentSymbol in 1ms
+
+10:14:57.045 id=23 [debug] handled request client -> server textDocument/documentSymbol in 977µs
+
+10:14:57.999 [debug] handled notification client -> server textDocument/didChange in 305µs
+
+10:14:58.000 id=24 [debug] handled request client -> server textDocument/codeAction in 316µs
+
+10:14:58.114 id=25 [debug] handled request client -> server textDocument/documentSymbol in 986µs
+
+10:14:58.114 id=26 [debug] handled request client -> server textDocument/documentSymbol in 699µs
+
+10:14:58.753 [debug] handled notification client -> server textDocument/didChange in 169µs
+
+10:14:58.763 id=27 [debug] handled request client -> server textDocument/codeAction in 203µs
+
+10:14:58.858 [debug] sent notification server -> client window/logMessage
+
+10:14:58.858 id=28 [debug] handled request client -> server textDocument/documentSymbol in 2ms
+
+10:14:58.864 [debug] sent notification server -> client window/logMessage
+
+10:14:58.864 id=29 [debug] handled request client -> server textDocument/documentSymbol in 572µs
+
+10:14:59.670 [debug] handled notification client -> server textDocument/didChange in 171µs
+
+10:14:59.679 id=30 [debug] handled request client -> server textDocument/codeAction in 210µs
+
+10:14:59.787 id=31 [debug] handled request client -> server textDocument/documentSymbol in 1ms
+
+10:14:59.788 id=32 [debug] handled request client -> server textDocument/documentSymbol in 1ms
+
+10:15:00.496 [debug] handled notification client -> server textDocument/didChange in 318µs
+
+10:15:00.504 id=33 [debug] handled request client -> server textDocument/codeAction in 237µs
+
+10:15:00.597 [debug] sent notification server -> client window/logMessage
+
+10:15:00.597 id=34 [debug] handled request client -> server textDocument/documentSymbol in 894µs
+
+10:15:00.600 [debug] sent notification server -> client window/logMessage
+
+10:15:00.600 id=35 [debug] handled request client -> server textDocument/documentSymbol in 624µs
+
+10:15:01.086 [debug] handled notification client -> server textDocument/didChange in 753µs
+
+10:15:01.095 id=36 [debug] handled request client -> server textDocument/codeAction in 395µs
+
+10:15:01.186 [debug] sent notification server -> client window/logMessage
+
+10:15:01.186 id=37 [debug] handled request client -> server textDocument/documentSymbol in 946µs
+
+10:15:01.187 [debug] sent notification server -> client window/logMessage
+
+10:15:01.187 id=38 [debug] handled request client -> server textDocument/documentSymbol in 710µs
+
+10:15:23.986 id=39 [debug] handled request client -> server textDocument/codeAction in 317µs
+
+10:15:25.217 id=40 [debug] handled request client -> server textDocument/hover in 1001ms
+
+10:15:26.705 [debug] handled notification client -> server textDocument/didChange in 196µs
+
+10:15:26.719 id=41 [debug] handled request client -> server textDocument/codeAction in 256µs
+
+10:15:26.817 [debug] sent notification server -> client window/logMessage
+
+10:15:26.818 id=42 [debug] handled request client -> server textDocument/documentSymbol in 2ms
+
+10:15:26.822 [debug] sent notification server -> client window/logMessage
+
+10:15:26.822 id=43 [debug] handled request client -> server textDocument/documentSymbol in 539µs
+
+10:15:27.479 id=44 [debug] handled request client -> server textDocument/codeAction in 241µs
+
+10:15:29.911 [debug] handled notification client -> server textDocument/didChange in 217µs
+
+10:15:29.915 id=45 [debug] handled request client -> server textDocument/codeAction in 244µs
+
+10:15:30.018 [debug] sent notification server -> client window/logMessage
+
+10:15:30.018 id=46 [debug] handled request client -> server textDocument/documentSymbol in 846µs
+
+10:15:30.022 [debug] sent notification server -> client window/logMessage
+
+10:15:30.022 id=47 [debug] handled request client -> server textDocument/documentSymbol in 513µs
+
+10:15:32.696 id=48 [debug] handled request client -> server textDocument/codeAction in 762µs
+
+10:15:33.618 [debug] handled notification client -> server textDocument/didChange in 176µs
+
+10:15:33.622 id=49 [debug] handled request client -> server textDocument/codeAction in 206µs
+
+10:15:33.716 [debug] sent notification server -> client window/logMessage
+
+10:15:33.716 id=50 [debug] handled request client -> server textDocument/documentSymbol in 690µs
+
+10:15:33.716 [debug] sent notification server -> client window/logMessage
+
+10:15:33.716 id=51 [debug] handled request client -> server textDocument/documentSymbol in 502µs
+
+10:15:34.679 id=52 [debug] handled request client -> server textDocument/codeAction in 238µs
+
+10:15:35.359 [debug] handled notification client -> server textDocument/didChange in 173µs
+
+10:15:35.371 id=53 [debug] handled request client -> server textDocument/codeAction in 256µs
+
+10:15:35.465 [debug] sent notification server -> client window/logMessage
+
+10:15:35.465 id=54 [debug] handled request client -> server textDocument/documentSymbol in 685µs
+
+10:15:35.465 [debug] sent notification server -> client window/logMessage
+
+10:15:35.465 id=55 [debug] handled request client -> server textDocument/documentSymbol in 504µs
+
+10:15:37.304 [debug] handled notification client -> server textDocument/didChange in 856µs
+
+10:15:37.307 id=56 [debug] handled request client -> server textDocument/codeAction in 369µs
+
+10:15:37.413 id=57 [debug] handled request client -> server textDocument/documentSymbol in 986µs
+
+10:15:37.414 id=58 [debug] handled request client -> server textDocument/documentSymbol in 1ms
+
+10:15:38.698 [debug] handled notification client -> server textDocument/didChange in 830µs
+
+10:15:38.702 id=59 [debug] handled request client -> server textDocument/codeAction in 790µs
+
+10:15:38.806 id=60 [debug] handled request client -> server textDocument/documentSymbol in 897µs
+
+10:15:38.807 id=61 [debug] handled request client -> server textDocument/documentSymbol in 1ms
+
+10:15:41.311 [debug] handled notification client -> server textDocument/didChange in 398µs
+
+10:15:41.313 id=62 [debug] handled request client -> server textDocument/codeAction in 245µs
+
+10:15:41.421 id=63 [debug] handled request client -> server textDocument/documentSymbol in 784µs
+
+10:15:41.422 id=64 [debug] handled request client -> server textDocument/documentSymbol in 738µs
+
+10:15:42.720 id=65 [debug] handled request client -> server textDocument/codeAction in 297µs
+
+10:15:43.610 [debug] handled notification client -> server textDocument/didChange in 217µs
+
+10:15:43.621 id=66 [debug] handled request client -> server textDocument/codeAction in 213µs
+
+10:15:43.715 id=67 [debug] handled request client -> server textDocument/documentSymbol in 829µs
+
+10:15:43.720 id=68 [debug] handled request client -> server textDocument/documentSymbol in 848µs
+
+10:15:45.872 [debug] handled notification client -> server textDocument/didChange in 234µs
+
+10:15:45.872 id=69 [debug] handled request client -> server textDocument/codeAction in 227µs
+
+10:15:45.974 id=70 [debug] handled request client -> server textDocument/documentSymbol in 1ms
+
+10:15:45.978 id=71 [debug] handled request client -> server textDocument/documentSymbol in 993µs
+
+10:15:46.320 [debug] handled notification client -> server textDocument/didChange in 736µs
+
+10:15:46.332 id=72 [debug] handled request client -> server textDocument/codeAction in 195µs
+
+10:15:46.425 id=73 [debug] handled request client -> server textDocument/documentSymbol in 736µs
+
+10:15:46.429 id=74 [debug] handled request client -> server textDocument/documentSymbol in 807µs
+
+10:15:47.657 [debug] handled notification client -> server textDocument/didChange in 170µs
+
+10:15:47.663 id=75 [debug] handled request client -> server textDocument/codeAction in 231µs
+
+10:15:47.772 id=76 [debug] handled request client -> server textDocument/documentSymbol in 1ms
+
+10:15:47.773 id=77 [debug] handled request client -> server textDocument/documentSymbol in 829µs
+
+10:15:48.774 [debug] handled notification client -> server textDocument/didChange in 261µs
+
+10:15:48.774 id=78 [debug] handled request client -> server textDocument/codeAction in 196µs
+
+10:15:48.889 id=79 [debug] handled request client -> server textDocument/documentSymbol in 949µs
+
+10:15:48.890 id=80 [debug] handled request client -> server textDocument/documentSymbol in 926µs
+
+10:15:53.307 id=81 [debug] handled request client -> server textDocument/codeAction in 289µs
+
+10:15:54.967 id=82 [debug] handled request client -> server textDocument/codeAction in 305µs
+
+10:15:57.223 [debug] handled notification client -> server textDocument/didChange in 187µs
+
+10:15:57.234 id=83 [debug] handled request client -> server textDocument/codeAction in 189µs
+
+10:15:57.327 id=84 [debug] handled request client -> server textDocument/documentSymbol in 906µs
+
+10:15:57.332 id=85 [debug] handled request client -> server textDocument/documentSymbol in 883µs
+
+10:15:57.676 [debug] handled notification client -> server textDocument/didChange in 562µs
+
+10:15:57.676 id=86 [debug] handled request client -> server textDocument/codeAction in 380µs
+
+10:15:57.783 [debug] sent notification server -> client window/logMessage
+
+10:15:57.783 id=87 [debug] handled request client -> server textDocument/documentSymbol in 720µs
+
+10:15:57.785 [debug] sent notification server -> client window/logMessage
+
+10:15:57.785 id=88 [debug] handled request client -> server textDocument/documentSymbol in 404µs
+
+10:15:58.169 [debug] handled notification client -> server textDocument/didChange in 214µs
+
+10:15:58.180 id=89 [debug] handled request client -> server textDocument/codeAction in 261µs
+
+10:15:58.273 id=90 [debug] handled request client -> server textDocument/documentSymbol in 831µs
+
+10:15:58.282 id=91 [debug] handled request client -> server textDocument/documentSymbol in 847µs
+
+10:15:59.083 [debug] handled notification client -> server textDocument/didChange in 359µs
+
+10:15:59.093 id=92 [debug] handled request client -> server textDocument/codeAction in 245µs
+
+10:15:59.182 [debug] handled notification client -> server textDocument/didChange in 179µs
+
+10:15:59.183 id=93 [debug] handled request client -> server textDocument/documentSymbol in 729µs
+
+10:15:59.235 id=94 [debug] handled request client -> server textDocument/documentSymbol in 1ms
+
+10:15:59.235 [debug] handled notification client -> server $/cancelRequest in 74µs
+
+10:15:59.431 id=95 [debug] handled request client -> server textDocument/codeAction in 205µs
+
+10:15:59.541 id=96 [debug] handled request client -> server textDocument/documentSymbol in 837µs
+
+10:15:59.542 id=97 [debug] handled request client -> server textDocument/documentSymbol in 891µs
+
+10:16:01.997 id=98 [debug] handled request client -> server textDocument/codeAction in 386µs
+
+10:16:03.556 id=99 [debug] handled request client -> server textDocument/codeAction in 559µs
+
+10:16:04.471 id=100 [debug] handled request client -> server textDocument/codeAction in 308µs
+
+10:16:06.906 id=101 [debug] handled request client -> server textDocument/codeAction in 711µs
+
+10:16:07.228 id=102 [debug] handled request client -> server textDocument/codeAction in 267µs
+
+10:16:09.897 [debug] handled notification client -> server textDocument/didChange in 229µs
+
+10:16:09.899 id=103 [debug] handled request client -> server textDocument/codeAction in 210µs
+
+10:16:10.007 id=104 [debug] handled request client -> server textDocument/documentSymbol in 1ms
+
+10:16:10.008 id=105 [debug] handled request client -> server textDocument/documentSymbol in 756µs
+
+10:16:11.277 id=106 [debug] handled request client -> server textDocument/codeAction in 265µs
+
+10:16:11.743 id=107 [debug] handled request client -> server textDocument/codeAction in 196µs
+
+10:16:13.755 id=108 [debug] handled request client -> server textDocument/codeAction in 426µs
+
+10:16:14.799 [debug] handled notification client -> server textDocument/didChange in 161µs
+
+10:16:14.800 id=109 [debug] handled request client -> server textDocument/codeAction in 155µs
+
+10:16:14.905 id=110 [debug] handled request client -> server textDocument/documentSymbol in 1ms
+
+10:16:14.906 id=111 [debug] handled request client -> server textDocument/documentSymbol in 1ms
+
+10:16:15.538 [debug] handled notification client -> server textDocument/didChange in 195µs
+
+10:16:15.545 id=112 [debug] handled request client -> server textDocument/codeAction in 252µs
+
+10:16:15.653 id=113 [debug] handled request client -> server textDocument/documentSymbol in 1ms
+
+10:16:15.654 id=114 [debug] handled request client -> server textDocument/documentSymbol in 896µs
+
+10:16:16.302 [debug] handled notification client -> server textDocument/didChange in 595µs
+
+10:16:16.305 id=115 [debug] handled request client -> server textDocument/codeAction in 488µs
+
+10:16:16.404 [debug] sent notification server -> client window/logMessage
+
+10:16:16.405 id=116 [debug] handled request client -> server textDocument/documentSymbol in 664µs
+
+10:16:16.418 [debug] sent notification server -> client window/logMessage
+
+10:16:16.418 id=117 [debug] handled request client -> server textDocument/documentSymbol in 673µs
+
+10:16:18.659 [debug] handled notification client -> server textDocument/didChange in 661µs
+
+10:16:18.670 id=118 [debug] handled request client -> server textDocument/codeAction in 249µs
+
+10:16:18.765 id=119 [debug] handled request client -> server textDocument/documentSymbol in 1ms
+
+10:16:18.769 id=120 [debug] handled request client -> server textDocument/documentSymbol in 724µs
+
+10:16:19.186 [debug] handled notification client -> server textDocument/didChange in 171µs
+
+10:16:19.213 id=121 [debug] handled request client -> server textDocument/codeAction in 211µs
+
+10:16:19.287 id=122 [debug] handled request client -> server textDocument/documentSymbol in 772µs
+
+10:16:19.292 id=123 [debug] handled request client -> server textDocument/documentSymbol in 856µs
+
+10:16:20.586 [debug] handled notification client -> server textDocument/didChange in 259µs
+
+10:16:20.586 id=124 [debug] handled request client -> server textDocument/codeAction in 189µs
+
+10:16:20.686 id=125 [debug] handled request client -> server textDocument/documentSymbol in 909µs
+
+10:16:20.687 id=126 [debug] handled request client -> server textDocument/documentSymbol in 1ms
+
+10:16:24.223 [debug] handled notification client -> server textDocument/didChange in 159µs
+
+10:16:24.226 id=127 [debug] handled request client -> server textDocument/codeAction in 266µs
+
+10:16:24.335 id=128 [debug] handled request client -> server textDocument/documentSymbol in 962µs
+
+10:16:24.336 id=129 [debug] handled request client -> server textDocument/documentSymbol in 943µs
+
+10:16:25.069 [debug] handled notification client -> server textDocument/didChange in 310µs
+
+10:16:25.072 id=130 [debug] handled request client -> server textDocument/codeAction in 300µs
+
+10:16:25.182 id=131 [debug] handled request client -> server textDocument/documentSymbol in 1ms
+
+10:16:25.183 id=132 [debug] handled request client -> server textDocument/documentSymbol in 897µs
+
+10:16:27.030 [debug] handled notification client -> server textDocument/didChange in 704µs
+
+10:16:27.040 id=133 [debug] handled request client -> server textDocument/codeAction in 377µs
+
+10:16:27.136 id=134 [debug] handled request client -> server textDocument/documentSymbol in 2ms
+
+10:16:27.139 id=135 [debug] handled request client -> server textDocument/documentSymbol in 894µs
+
+10:16:27.580 [debug] handled notification client -> server textDocument/didChange in 560µs
+
+10:16:27.584 id=136 [debug] handled request client -> server textDocument/codeAction in 769µs
+
+10:16:27.689 id=137 [debug] handled request client -> server textDocument/documentSymbol in 1ms
+
+10:16:27.690 id=138 [debug] handled request client -> server textDocument/documentSymbol in 875µs
+
+10:16:29.751 [debug] handled notification client -> server textDocument/didChange in 282µs
+
+10:16:29.751 id=139 [debug] handled request client -> server textDocument/codeAction in 235µs
+
+10:16:29.844 id=140 [debug] handled request client -> server textDocument/documentSymbol in 909µs
+
+10:16:29.850 id=141 [debug] handled request client -> server textDocument/documentSymbol in 886µs
+
+10:16:30.170 [debug] handled notification client -> server textDocument/didChange in 647µs
+
+10:16:30.172 id=142 [debug] handled request client -> server textDocument/codeAction in 453µs
+
+10:16:30.283 id=143 [debug] handled request client -> server textDocument/documentSymbol in 2ms
+
+10:16:30.284 id=144 [debug] handled request client -> server textDocument/documentSymbol in 924µs
+
+10:16:31.208 [debug] handled notification client -> server textDocument/didChange in 206µs
+
+10:16:31.208 id=145 [debug] handled request client -> server textDocument/codeAction in 265µs
+
+10:16:31.316 id=146 [debug] handled request client -> server textDocument/documentSymbol in 990µs
+
+10:16:31.322 id=147 [debug] handled request client -> server textDocument/documentSymbol in 1ms
+
+10:16:31.576 id=148 [debug] handled request client -> server textDocument/codeAction in 192µs
+
+10:16:32.260 [debug] handled notification client -> server textDocument/didChange in 527µs
+
+10:16:32.262 id=149 [debug] handled request client -> server textDocument/codeAction in 496µs
+
+10:16:32.367 id=150 [debug] handled request client -> server textDocument/documentSymbol in 1ms
+
+10:16:32.368 id=151 [debug] handled request client -> server textDocument/documentSymbol in 1ms
+
+10:16:32.794 [debug] handled notification client -> server textDocument/didChange in 604µs
+
+10:16:32.900 id=152 [debug] handled request client -> server textDocument/documentSymbol in 2ms
+
+10:16:32.902 id=153 [debug] handled request client -> server textDocument/documentSymbol in 891µs
+
+10:16:35.609 [error] ** (BadMapError) expected a map, got: nil
+    (stdlib 5.2) :maps.merge(%{}, nil)
+    (next_ls 0.22.8) lib/next_ls.ex:1005: anonymous fn/2 in NextLS.handle_notification/2
+    (elixir 1.17.0-dev) lib/map.ex:916: Map.update!/3
+    (next_ls 0.22.8) lib/next_ls.ex:1005: NextLS.handle_notification/2
+    (gen_lsp 0.10.0) lib/gen_lsp.ex:478: anonymous fn/2 in GenLSP.loop/3
+    (telemetry 1.2.1) /Users/runner/work/next-ls/next-ls/deps/telemetry/src/telemetry.erl:321: :telemetry.span/3
+    (gen_lsp 0.10.0) lib/gen_lsp.ex:474: anonymous fn/7 in GenLSP.loop/3
+    (gen_lsp 0.10.0) lib/gen_lsp.ex:553: GenLSP.attempt/4
+
+
+10:16:35.609 [debug] sent notification server -> client window/logMessage
+
+10:16:35.912 [debug] handled notification client -> server workspace/didChangeWatchedFiles in 3ms
+
+10:16:38.156 id=154 [debug] handled request client -> server textDocument/hover in 1001ms
+
+10:16:38.156 [debug] handled notification client -> server $/cancelRequest in 61µs
+
+10:17:42.152 id=155 [debug] handled request client -> server textDocument/codeAction in 290µs
+
+10:17:42.385 id=156 [debug] handled request client -> server textDocument/codeAction in 394µs
+
+10:17:42.468 id=157 [debug] handled request client -> server textDocument/documentSymbol in 1ms
+
+10:17:43.701 id=158 [debug] handled request client -> server textDocument/hover in 1000ms
+
+10:17:43.702 [debug] handled notification client -> server $/cancelRequest in 139µs
+
+10:17:45.487 id=159 [debug] handled request client -> server textDocument/hover in 1000ms
+
+10:17:45.487 [debug] handled notification client -> server $/cancelRequest in 73µs
+
+10:17:51.291 [debug] handled notification client -> server textDocument/didOpen in 136µs
+
+10:17:51.292 id=160 [debug] handled request client -> server textDocument/codeAction in 196µs
+
+10:17:51.292 id=161 [debug] handled request client -> server textDocument/documentSymbol in 272µs
+
+10:17:51.589 id=162 [debug] handled request client -> server textDocument/documentSymbol in 379µs
+
+10:17:54.096 id=163 [debug] handled request client -> server textDocument/hover in 1000ms
+
+10:17:54.097 [debug] handled notification client -> server $/cancelRequest in 64µs
+
+10:17:55.097 id=164 [debug] handled request client -> server textDocument/hover in 1000ms
+
+10:17:55.098 [debug] handled notification client -> server $/cancelRequest in 151µs
+
+10:19:46.657 [debug] handled notification client -> server textDocument/didClose in 3ms
+
+10:19:46.677 [debug] handled notification client -> server textDocument/didOpen in 239µs
+
+10:19:46.677 id=165 [debug] handled request client -> server textDocument/codeAction in 212µs
+
+10:19:46.678 id=166 [debug] handled request client -> server textDocument/documentSymbol in 1ms
+
+10:19:46.975 id=167 [debug] handled request client -> server textDocument/documentSymbol in 828µs
+
+10:19:48.211 id=168 [debug] handled request client -> server textDocument/hover in 1000ms
+
+10:19:48.211 [debug] handled notification client -> server $/cancelRequest in 76µs
+
+10:21:49.650 id=169 [debug] handled request client -> server textDocument/codeAction in 378µs
+
+10:21:49.892 id=170 [debug] handled request client -> server textDocument/codeAction in 347µs
+
+10:21:49.967 id=171 [debug] handled request client -> server textDocument/documentSymbol in 1ms
+
+10:21:51.226 id=172 [debug] handled request client -> server textDocument/codeAction in 344µs
+
+10:21:51.536 id=173 [debug] handled request client -> server textDocument/documentSymbol in 790µs
+
+10:21:53.156 id=174 [debug] handled request client -> server textDocument/hover in 1001ms
+
+10:21:57.156 id=175 [debug] handled request client -> server textDocument/codeAction in 425µs
+
+10:21:59.336 id=176 [debug] handled request client -> server textDocument/codeAction in 468µs
+
+10:21:59.644 id=177 [debug] handled request client -> server textDocument/codeAction in 296µs
+
+10:22:02.153 id=178 [debug] handled request client -> server textDocument/hover in 1001ms
+
+10:22:02.153 [debug] handled notification client -> server $/cancelRequest in 62µs
+
+10:56:50.066 [info] Loading 137 CA(s) from :otp store
+
+10:56:50.211 id=0 [debug] handled request client -> server initialize in 102ms
+
+10:56:50.217 [debug] sent notification server -> client window/logMessage
+
+10:56:50.222 [debug] NextLS v0.22.8 has initialized!
+
+10:56:50.222 [debug] sent notification server -> client window/logMessage
+
+10:56:50.222 [debug] Log file located at /home/tiago/dev/elixir/rinha-de-backend-2024/rinha_2024/.elixir-tools/next-ls.log
+
+10:56:50.224 [debug] sent notification server -> client window/logMessage
+
+10:56:50.224 id=136 [debug] sent request server -> client client/registerCapability
+
+10:56:50.224 [info] [extension] Credo initializing with options %NextLS.InitOpts.Extensions.Credo{enable: true, cli_options: []}
+
+10:56:50.516 [debug] sent notification server -> client window/logMessage
+
+10:56:50.516 [warning] Failed to unzip and install the bundled Elixir archive.
+
+** (MatchError) no match of right hand side value: {"{\"init terminating in do_boot\",{undef,[{elixir,start_cli,[],[]},{init,start_em,1,[]},{init,do_boot,3,[]}]}}\r\n", 1}
+    (next_ls 0.22.8) lib/next_ls/runtime/bundled_elixir.ex:49: NextLS.Runtime.BundledElixir.install/2
+    (next_ls 0.22.8) lib/next_ls.ex:902: NextLS.handle_notification/2
+    (gen_lsp 0.10.0) lib/gen_lsp.ex:478: anonymous fn/2 in GenLSP.loop/3
+    (telemetry 1.2.1) /Users/runner/work/next-ls/next-ls/deps/telemetry/src/telemetry.erl:321: :telemetry.span/3
+    (gen_lsp 0.10.0) lib/gen_lsp.ex:474: anonymous fn/7 in GenLSP.loop/3
+    (gen_lsp 0.10.0) lib/gen_lsp.ex:553: GenLSP.attempt/4
+    (stdlib 5.2) proc_lib.erl:241: :proc_lib.init_p_do_apply/3
+
+
+
+10:56:50.516 [debug] sent notification server -> client window/logMessage
+
+10:56:50.516 [debug] Booting runtimes...
+
+10:56:50.520 id=3 [debug] sent request server -> client window/workDoneProgress/create
+
+10:56:50.526 [debug] sent notification server -> client $/progress
+
+10:56:50.540 [debug] sent notification server -> client window/logMessage
+
+10:56:50.540 [info] Beginning DB migration...
+
+10:56:50.545 [debug] sent notification server -> client window/logMessage
+
+10:56:50.545 [info] Database is on the latest version: 7
+
+10:56:50.545 [debug] sent notification server -> client window/logMessage
+
+10:56:50.546 [info] Finished DB migration...
+
+10:56:50.546 [debug] sent notification server -> client window/logMessage
+
+10:56:50.546 [info] Booting runtime for rinha_2024.
+
+- elixir: /home/tiago/.asdf/shims/elixir
+- zombie wrapper script: /home/tiago/.local/share/.burrito/next_ls_erts-14.2.1_0.22.8/lib/next_ls-0.22.8/priv/cmd
+- working_dir: /home/tiago/dev/elixir/rinha-de-backend-2024/rinha_2024
+- command: /home/tiago/.asdf/shims/elixir --no-halt --sname nextls-runtime-1718114210545930929 --cookie VSW5V6KTWVUXRC2CHACIXZJ3QA4RP7N55IDNZ4HV5O4DF66HTXBQ==== -S mix loadpaths --no-compile
+
+Environment: 
+
+LSP=nextls
+NEXTLS_PARENT_PID=g1h3JW5leHQtbHMtMTcxODExNDIxMDA3OTY2NTg5OUBUSUFHT05PVEUAAAEMAAAAAGZoV6M=
+MIX_ENV=dev
+MIX_TARGET=host
+MIX_BUILD_ROOT=.elixir-tools/_build
+ROOTDIR=false
+BINDIR=false
+RELEASE_ROOT=false
+RELEASE_SYS_CONFIG=false
+PATH=/home/tiago/.asdf/shims:/home/tiago/.local/share/.burrito/next_ls_erts-14.2.1_0.22.8/bin:/home/tiago/.vscode-server/bin/89de5a8d4d6205e5b11647eb6a74844ca23d2573/bin/remote-cli:/home/tiago/.local/bin:/home/tiago/bin:/home/tiago/.cargo/bin:/home/tiago/.asdf/shims:/home/tiago/.asdf/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files (x86)/Common Files/Oracle/Java/javapath:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/mnt/c/Program Files/Microsoft SQL Server/150/Tools/Binn/:/mnt/c/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn/:/mnt/c/Program Files/dotnet/:/mnt/c/Program Files (x86)/NuGet:/mnt/c/Program Files (x86)/Microsoft SQL Server/150/DTS/Binn/:/mnt/c/Program Files/Microsoft SQL Server/150/DTS/Binn/:/mnt/c/Program Files (x86)/Microsoft SQL Server/150/Tools/Binn/:/mnt/c/Program Files/Microsoft SQL Server/Client SDK/ODBC/130/Tools/Binn/:/mnt/c/Program Files (x86)/Microsoft SQL Server/130/Tools/Binn/:/mnt/c/Program Files/Microsoft SQL Server/130/Tools/Binn/:/mnt/c/Program Files/Microsoft SQL Server/130/DTS/Binn/:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/Elixir/bin/mix.bat:/mnt/c/Users/tiago/AppData/Roaming/nvm:/mnt/c/Program Files/nodejs:/mnt/c/Users/tiago/.mix/escripts:/mnt/c/Program Files/Erlang OTP/bin:/mnt/c/Program Files/Elixir/bin:/mnt/c/Program Files/LINQPad7:/mnt/c/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Auxiliary/Build:/mnt/c/Program Files/Elixir/bin:/mnt/c/Program Files/Erlang OTP/bin:/mnt/c/Users/tiago/.cargo/bin:/mnt/c/Users/tiago/AppData/Local/Programs/Python/Python310/Scripts/:/mnt/c/Users/tiago/AppData/Local/Programs/Python/Python310/:/mnt/c/Users/tiago/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/tiago/.dotnet/tools:/mnt/c/Users/tiago/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/tiago/AppData/Roaming/npm:/mnt/c/Program Files/Azure Data Studio/bin:/mnt/c/Program Files/JetBrains/PyCharm Community Edition 2021.3.2/bin:/mnt/c/Exercism:/mnt/c/Program Files/JetBrains/IntelliJ IDEA Community Edition 2022.2.2/bin:/mnt/c/Program Files/JetBrains/JetBrains Rider 2022.3.1/bin:/mnt/c/Users/tiago/AppData/Roaming/nvm:/mnt/c/Program Files/nodejs:/mnt/c/Users/tiago/go/bin:/mnt/c/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Auxiliary/Build/:/mnt/c/Program Files/Azure Data Studio/bin:/mnt/c/Users/tiago/.fly/bin:/mnt/d/cmd_aliases:/mnt/c/Program Files/CodeBlocks/MinGW/bin:/mnt/c/Users/tiago/.dotnet/tools:/mnt/c/Users/tiago/appdata/roaming/python/python38/Scripts:/mnt/c/Program Files/Elixir/bin:/mnt/c/Program Files/Erlang OTP/bin:/mnt/c/Users/tiago/.cargo/bin:/mnt/c/Users/tiago/AppData/Local/Programs/Python/Python310/Scripts/:/mnt/c/Users/tiago/AppData/Local/Programs/Python/Python310/:/mnt/c/Users/tiago/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/tiago/.dotnet/tools:/mnt/c/Users/tiago/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/tiago/AppData/Roaming/npm:/mnt/c/Program Files/Azure Data Studio/bin:/mnt/c/Program Files/JetBrains/PyCharm Community Edition 2021.3.2/bin:/mnt/c/Exercism:/mnt/c/Program Files/JetBrains/IntelliJ IDEA Community Edition 2022.2.2/bin:/mnt/c/Program Files/JetBrains/JetBrains Rider 2022.3.1/bin:/mnt/c/Users/tiago/AppData/Roaming/nvm:/mnt/c/Program Files/nodejs:/mnt/c/Users/tiago/go/bin:/mnt/c/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Auxiliary/Build/:/mnt/c/Program Files/Azure Data Studio/bin:/mnt/c/Users/tiago/.fly/bin:/mnt/d/cmd_aliases:/mnt/c/Program Files/CodeBlocks/MinGW/bin:/mnt/c/Users/tiago/.dotnet/tools:/mnt/c/Users/tiago/AppData/Roaming/Python/Python310/Scripts/gigalixir.exe:/mnt/c/Users/tiago/appdata/roaming/python/Python310/Scripts:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/Docker/Docker/resources/bin:/mnt/c/Program Files (x86)/Microsoft SQL Server/160/DTS/Binn/:/mnt/c/Program Files/Elixir/bin:/mnt/c/Program Files/Erlang OTP/bin:/mnt/c/Users/tiago/AppData/Local/Programs/Python/Python310/Scripts/:/mnt/c/Users/tiago/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/tiago/.dotnet/tools:/mnt/c/Users/tiago/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/tiago/AppData/Roaming/npm:/mnt/c/Program Files/Azure Data Studio/bin:/mnt/c/Program Files/JetBrains/PyCharm Community Edition 2021.3.2/bin:/mnt/c/Exercism:/mnt/c/Program Files/JetBrains/IntelliJ IDEA Community Edition 2022.2.2/bin:/mnt/c/Program Files/JetBrains/JetBrains Rider 2022.3.1/bin:/mnt/c/Users/tiago/AppData/Roaming/nvm:/mnt/c/Program Files/nodejs:/mnt/c/Users/tiago/go/bin:/mnt/c/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Auxiliary/Build/:/mnt/c/Program Files/Azure Data Studio/bin:/mnt/c/Users/tiago/.fly/bin:/mnt/d/cmd_aliases:/mnt/c/Program Files/CodeBlocks/MinGW/bin:/mnt/c/Users/tiago/.dotnet/tools:/mnt/c/Users/tiago/AppData/Local/Programs/Python/Python310/:/snap/bin
+
+
+10:56:50.547 [debug] handled notification client -> server initialized in 332ms
+
+10:56:50.550 [debug] handled notification client -> server textDocument/didOpen in 3ms
+
+10:56:50.561 id=1 [debug] handled request client -> server textDocument/documentSymbol in 11ms
+
+10:56:50.581 id=2 [debug] handled request client -> server textDocument/codeAction in 19ms
+
+10:56:50.582 id=3 [debug] handled request client -> server textDocument/documentSymbol in 1ms
+
+10:56:51.555 [debug] sent notification server -> client window/logMessage
+
+10:56:51.555 [info] Connected to node nextls-runtime-1718114210545930929@TIAGONOTE
+
+10:56:51.770 [debug] sent notification server -> client $/progress
+
+10:56:51.772 [debug] sent notification server -> client window/logMessage
+
+10:56:51.772 [debug] Runtime for folder rinha_2024 is ready...
+
+10:56:51.775 id=648 [debug] sent request server -> client window/workDoneProgress/create
+
+10:56:51.776 [debug] sent notification server -> client $/progress
+
+10:56:51.817 [debug] sent notification server -> client window/logMessage
+
+10:56:51.817 [info] ==> file_system
+Compiling 7 files (.ex)
+
+
+10:56:51.913 [debug] sent notification server -> client window/logMessage
+
+10:56:51.914 [info] Generated file_system app
+
+
+10:56:51.924 [debug] sent notification server -> client window/logMessage
+
+10:56:51.925 [info] ==> bunt
+Compiling 2 files (.ex)
+
+
+10:56:52.270 [debug] sent notification server -> client window/logMessage
+
+10:56:52.271 [info] Generated bunt app
+
+
+10:56:52.560 [debug] sent notification server -> client window/logMessage
+
+10:56:52.560 [info] ===> Analyzing applications...
+
+
+10:56:52.571 [debug] sent notification server -> client window/logMessage
+
+10:56:52.571 [info] ===> Compiling telemetry
+
+
+10:56:52.757 [debug] sent notification server -> client window/logMessage
+
+10:56:52.757 [info] ==> decimal
+Compiling 4 files (.ex)
+
+
+10:56:53.082 [debug] sent notification server -> client window/logMessage
+
+10:56:53.082 [info] Generated decimal app
+
+
+10:56:53.099 [debug] sent notification server -> client window/logMessage
+
+10:56:53.099 [info] ==> jason
+Compiling 10 files (.ex)
+
+
+10:56:53.155 id=712 [debug] sent request server -> client window/workDoneProgress/create
+
+10:56:53.156 [debug] sent notification server -> client $/progress
+
+10:56:53.424 [debug] sent notification server -> client $/progress
+
+10:56:53.973 [debug] sent notification server -> client window/logMessage
+
+10:56:53.973 [info] Generated jason app
+
+
+10:56:54.764 [debug] sent notification server -> client window/logMessage
+
+10:56:54.765 [info] ===> Analyzing applications...
+
+
+10:56:54.803 [debug] sent notification server -> client window/logMessage
+
+10:56:54.803 [info] ===> Compiling elli
+
+
+10:56:55.244 [debug] sent notification server -> client window/logMessage
+
+10:56:55.244 [info] ==> db_connection
+Compiling 15 files (.ex)
+
+
+10:56:55.297 id=6 [debug] sent request server -> client window/workDoneProgress/create
+
+10:56:55.298 [debug] sent notification server -> client $/progress
+
+10:56:55.561 [debug] sent notification server -> client $/progress
+
+10:56:55.591 [debug] sent notification server -> client window/logMessage
+
+10:56:55.591 [info] Generated db_connection app
+
+
+10:56:55.614 [debug] sent notification server -> client window/logMessage
+
+10:56:55.614 [info] ==> credo
+Compiling 253 files (.ex)
+
+
+10:56:55.838 id=776 [debug] sent request server -> client window/workDoneProgress/create
+
+10:56:55.840 [debug] sent notification server -> client $/progress
+
+10:56:57.002 [debug] sent notification server -> client $/progress
+
+10:56:57.051 id=4 [debug] sent request server -> client window/workDoneProgress/create
+
+10:56:57.052 [debug] sent notification server -> client $/progress
+
+10:56:58.139 [debug] sent notification server -> client window/logMessage
+
+10:56:58.139 [info] Generated credo app
+
+
+10:56:58.156 [debug] sent notification server -> client window/logMessage
+
+10:56:58.156 [info] ==> ecto
+Compiling 56 files (.ex)
+
+
+10:56:59.917 [debug] sent notification server -> client $/progress
+
+10:57:00.229 [debug] sent notification server -> client window/logMessage
+
+10:57:00.229 [info] Generated ecto app
+
+
+10:57:00.245 [debug] sent notification server -> client window/logMessage
+
+10:57:00.245 [info] ==> postgrex
+Compiling 68 files (.ex)
+
+
+10:57:00.285 id=10 [debug] sent request server -> client window/workDoneProgress/create
+
+10:57:00.290 [debug] sent notification server -> client $/progress
+
+10:57:01.056 [debug] sent notification server -> client $/progress
+
+10:57:04.498 [debug] sent notification server -> client window/logMessage
+
+10:57:04.498 [info] Generated postgrex app
+
+
+10:57:04.522 [debug] sent notification server -> client window/logMessage
+
+10:57:04.522 [info] ==> ecto_sql
+Compiling 25 files (.ex)
+
+
+10:57:04.646 id=130 [debug] sent request server -> client window/workDoneProgress/create
+
+10:57:04.648 [debug] sent notification server -> client $/progress
+
+10:57:04.970 [debug] sent notification server -> client $/progress
+
+10:57:05.042 [debug] sent notification server -> client window/logMessage
+
+10:57:05.043 [info] Generated ecto_sql app
+
+
+10:57:05.056 [debug] sent notification server -> client window/logMessage
+
+10:57:05.057 [info] ==> rinha_2024
+Compiling 6 files (.ex)
+
+
+10:57:05.072 [debug] sent notification server -> client window/logMessage
+
+10:57:05.072 [info]     warning: variable "req" is unused (if the variable is not meant to be used, prefix it with an underscore)
+    │
+ 11 │   defp do_handle(:POST, ["clientes", id, "transacoes"], req), do: {:ok, "post to id #{id}"}
+    │                                                         ~~~
+    │
+    └─ lib/elli_callback.ex:11:57: ElliCallback.do_handle/3
+
+
+
+10:57:05.091 id=67 [debug] sent request server -> client window/workDoneProgress/create
+
+10:57:05.092 [debug] sent notification server -> client $/progress
+
+10:57:05.119 [debug] sent notification server -> client window/logMessage
+
+10:57:05.119 [info] Generated rinha_2024 app
+
+
+10:57:05.122 [debug] sent notification server -> client $/progress
+
+10:57:05.122 [debug] sent notification server -> client window/logMessage
+
+10:57:05.122 [info] Compiled rinha_2024!
+
+10:57:05.122 [debug] sent notification server -> client textDocument/publishDiagnostics
+
+10:57:05.138 [debug] sent notification server -> client textDocument/publishDiagnostics
+
+10:57:05.156 [debug] sent notification server -> client textDocument/publishDiagnostics
+
+10:57:05.157 [debug] sent notification server -> client textDocument/publishDiagnostics
+
+10:57:05.157 [debug] sent notification server -> client textDocument/publishDiagnostics
+
+10:57:05.244 [debug] sent notification server -> client $/progress
+
+10:57:05.428 id=4 [debug] handled request client -> server textDocument/codeAction in 359µs

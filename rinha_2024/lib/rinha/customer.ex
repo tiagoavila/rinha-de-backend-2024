@@ -16,6 +16,13 @@ defmodule Rinha.Customer do
     |> process_transaction(customer_id)
   end
 
+  def get_statement(customer_id) do
+    case MapSet.member?(@customer_ids, customer_id) do
+      true -> {:ok, %{"saldo" => 50}}
+      false -> {:client_not_found, "Cliente não encontrado"}
+    end    
+  end
+
   defp validate_required_fields(transaction) do
     cond do
       Map.has_key?(transaction, "descricao") && Map.has_key?(transaction, "tipo") &&

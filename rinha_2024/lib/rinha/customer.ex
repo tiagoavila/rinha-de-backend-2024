@@ -9,7 +9,7 @@ defmodule Rinha.Customer do
     field(:saldo, :integer)
   end
 
-  def add_transaction(transaction_body, customer_id) do
+  def update_balance(transaction_body, customer_id) do
     Poison.decode!(transaction_body)
     |> validate_required_fields()
     |> validate_transaction(customer_id)
@@ -60,7 +60,7 @@ defmodule Rinha.Customer do
   defp process_transaction({:ok, %{"tipo" => "c"} = transaction}, customer_id) do
     customer = Rinha.Repo.get(Rinha.Customer, customer_id)
     new_balance = transaction["valor"] + customer.saldo
-    update_balance(customer, new_balance)
+    save_new_balance(customer, new_balance)
   end
 
   defp process_transaction({:ok, %{"tipo" => "d"} = transaction}, customer_id) do
@@ -69,13 +69,13 @@ defmodule Rinha.Customer do
 
     cond do
       new_balance < -customer.limite -> {:error, "Saldo inconsistente"}
-      true -> update_balance(customer, new_balance)
+      true -> save_new_balance(customer, new_balance)
     end
   end
 
   defp process_transaction(error, _), do: error
 
-  defp update_balance(customer, new_balance) do
+  defp save_new_balance(customer, new_balance) do
     changeset = Ecto.Changeset.change(customer, saldo: new_balance)
 
     case Rinha.Repo.update(changeset) do

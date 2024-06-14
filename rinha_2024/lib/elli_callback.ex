@@ -13,7 +13,7 @@ defmodule ElliCallback do
   defp do_handle(:POST, ["clientes", customer_id, "transacoes"], req) do
     customer_id = String.to_integer(customer_id)
 
-    case :elli_request.body(req) |> Customer.add_transaction(customer_id) do
+    case :elli_request.body(req) |> Customer.update_balance(customer_id) do
       {:ok, transaction} -> transaction |> return_ok_response()
       {:error, message} -> message |> return_error_message_response(400)
       {:client_not_found, message} -> message |> return_error_message_response(404)

@@ -1,6 +1,6 @@
 defmodule Rinha.ReleaseTasks do
   @app :rinha_2024
-  
+
   def migrate do
     for repo <- repos() do
       case repo.__adapter__().storage_up(repo.config()) do

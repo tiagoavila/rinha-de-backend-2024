@@ -1,5 +1,6 @@
 defmodule Rinha.Customer do
   use Ecto.Schema
+  import Ecto.Query
 
   @customer_ids MapSet.new([1, 2, 3, 4, 5])
 
@@ -19,7 +20,7 @@ defmodule Rinha.Customer do
 
   def get_statement(customer_id) do
     case MapSet.member?(@customer_ids, customer_id) do
-      true -> {:ok, %{"saldo" => 50}}
+      true -> {:ok, do_get_statement(customer_id)}
       false -> {:client_not_found, "Cliente não encontrado"}
     end
   end
@@ -78,7 +79,9 @@ defmodule Rinha.Customer do
     new_balance = customer.saldo - transaction["valor"]
 
     cond do
-      new_balance < -customer.limite -> {:error, "Saldo inconsistente"}
+      new_balance < -customer.limite ->
+        {:error, "Saldo inconsistente"}
+
       true ->
         save_transaction_to_db_async(customer, transaction)
         save_new_balance(customer, new_balance)
@@ -103,11 +106,45 @@ defmodule Rinha.Customer do
     Task.start(fn ->
       Ecto.build_assoc(customer, :transacao, %{
         descricao: transaction["descricao"],
-        tipo: "c",
+        tipo: transaction["tipo"],
         valor: transaction["valor"],
         realizada_em: NaiveDateTime.truncate(NaiveDateTime.utc_now(), :second)
       })
       |> Rinha.Repo.insert()
     end)
+  end
+
+  defp do_get_statement(customer_id) do
+    query =
+      from(c in Rinha.Customer,
+        where: c.id == ^customer_id
+      )
+
+    customer = Rinha.Repo.one(query)
+
+    query =
+      from(t in Rinha.Transaction,
+        where: t.cliente_id == ^customer_id,
+        limit: 10,
+        order_by: [desc: :realizada_em]
+      )
+
+    transactions = Rinha.Repo.all(query)
+
+    %{
+      "saldo" => %{
+        "total" => customer.saldo,
+        "limite" => customer.limite,
+        "data_extrato" => NaiveDateTime.to_iso8601(NaiveDateTime.utc_now())
+      },
+      "ultimas_transacoes" => transactions |> Enum.map(fn transaction ->
+        %{
+          "descricao" => transaction.descricao,
+          "tipo" => transaction.tipo,
+          "valor" => transaction.valor,
+          "realizada_em" => NaiveDateTime.to_iso8601(transaction.realizada_em)
+        }
+      end)
+    }
   end
 end

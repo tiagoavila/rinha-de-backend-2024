@@ -13,7 +13,7 @@ defmodule ElliCallback do
   defp do_handle(:POST, ["clientes", customer_id, "transacoes"], req) do
     customer_id = String.to_integer(customer_id)
 
-    case :elli_request.body(req) |> Poison.encode!() |> Customer.update_balance(customer_id) do
+    case :elli_request.body(req) |> Poison.decode!() |> Customer.update_balance(customer_id) do
       {:ok, transaction} -> return_ok_response(transaction)
       {:error, message} -> return_bad_request(message)
       {:client_not_found, message} -> return_not_found(message)

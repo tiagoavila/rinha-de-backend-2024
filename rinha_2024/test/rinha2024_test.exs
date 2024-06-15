@@ -8,7 +8,10 @@ defmodule Rinha2024Test do
     {:ok, customer: customer, customer_id: customer_id}
   end
 
-  test "Test Update Balance with Credit Transaction", %{customer: customer, customer_id: customer_id} do
+  test "Test Update Balance with Credit Transaction", %{
+    customer: customer,
+    customer_id: customer_id
+  } do
     new_balance = customer.saldo + 100
 
     transaction_body =
@@ -22,7 +25,10 @@ defmodule Rinha2024Test do
     assert {:ok, %{"limite" => 100_000, "saldo" => new_balance}} == updated_balance_response
   end
 
-  test "Test Update Balance with Debit Transaction", %{customer: customer, customer_id: customer_id} do
+  test "Test Update Balance with Debit Transaction", %{
+    customer: customer,
+    customer_id: customer_id
+  } do
     new_balance = customer.saldo - 100
 
     transaction_body =

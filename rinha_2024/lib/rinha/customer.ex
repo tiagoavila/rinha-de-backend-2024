@@ -7,10 +7,11 @@ defmodule Rinha.Customer do
   schema "cliente" do
     field(:limite, :integer)
     field(:saldo, :integer)
+    has_many(:transacao, Rinha.Transaction, foreign_key: :cliente_id)
   end
 
   def update_balance(transaction_body, customer_id) do
-    Poison.decode!(transaction_body)
+    transaction_body
     |> validate_required_fields()
     |> validate_transaction(customer_id)
     |> process_transaction(customer_id)
@@ -20,7 +21,7 @@ defmodule Rinha.Customer do
     case MapSet.member?(@customer_ids, customer_id) do
       true -> {:ok, %{"saldo" => 50}}
       false -> {:client_not_found, "Cliente não encontrado"}
-    end    
+    end
   end
 
   defp validate_required_fields(transaction) do
@@ -67,6 +68,8 @@ defmodule Rinha.Customer do
   defp process_transaction({:ok, %{"tipo" => "c"} = transaction}, customer_id) do
     customer = Rinha.Repo.get(Rinha.Customer, customer_id)
     new_balance = transaction["valor"] + customer.saldo
+
+    save_transaction_to_db_async(customer, transaction)
     save_new_balance(customer, new_balance)
   end
 
@@ -76,7 +79,9 @@ defmodule Rinha.Customer do
 
     cond do
       new_balance < -customer.limite -> {:error, "Saldo inconsistente"}
-      true -> save_new_balance(customer, new_balance)
+      true ->
+        save_transaction_to_db_async(customer, transaction)
+        save_new_balance(customer, new_balance)
     end
   end
 
@@ -92,5 +97,17 @@ defmodule Rinha.Customer do
       error ->
         error
     end
+  end
+
+  defp save_transaction_to_db_async(customer, transaction) do
+    Task.start(fn ->
+      Ecto.build_assoc(customer, :transacao, %{
+        descricao: transaction["descricao"],
+        tipo: "c",
+        valor: transaction["valor"],
+        realizada_em: NaiveDateTime.truncate(NaiveDateTime.utc_now(), :second)
+      })
+      |> Rinha.Repo.insert()
+    end)
   end
 end

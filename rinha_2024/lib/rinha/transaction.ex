@@ -5,8 +5,7 @@ defmodule Rinha.Transaction do
         field(:descricao, :string)
         field(:tipo, :string)
         field(:valor, :integer)
-        belongs_to(:customer, Rinha.Customer)
-
-        timestamps()
+        field(:realizada_em, :naive_datetime)
+        belongs_to(:cliente, Rinha.Customer)
     end
 end

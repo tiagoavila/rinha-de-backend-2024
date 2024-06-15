@@ -13,7 +13,7 @@ defmodule ElliCallback do
   defp do_handle(:POST, ["clientes", customer_id, "transacoes"], req) do
     customer_id = String.to_integer(customer_id)
 
-    case :elli_request.body(req) |> Customer.update_balance(customer_id) do
+    case :elli_request.body(req) |> Poison.encode!() |> Customer.update_balance(customer_id) do
       {:ok, transaction} -> return_ok_response(transaction)
       {:error, message} -> return_bad_request(message)
       {:client_not_found, message} -> return_not_found(message)
@@ -32,9 +32,16 @@ defmodule ElliCallback do
   @impl true
   def handle_event(_event, _data, _args), do: :ok
 
-  defp return_ok_response(response_entity), do: {:ok, [{"Content-Type", "application/json"}], response_entity |> Poison.encode!()}
+  defp return_ok_response(response_entity),
+    do: {:ok, [{"Content-Type", "application/json"}], response_entity |> Poison.encode!()}
 
-  defp return_bad_request(error_message), do: {400, [{"Content-Type", "application/json"}], %{"error" => error_message} |> Poison.encode!()}
+  defp return_bad_request(error_message),
+    do:
+      {400, [{"Content-Type", "application/json"}],
+       %{"error" => error_message} |> Poison.encode!()}
 
-  defp return_not_found(error_message), do: {404, [{"Content-Type", "application/json"}], %{"error" => error_message} |> Poison.encode!()}
+  defp return_not_found(error_message),
+    do:
+      {404, [{"Content-Type", "application/json"}],
+       %{"error" => error_message} |> Poison.encode!()}
 end

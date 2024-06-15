@@ -7,8 +7,7 @@ defmodule Rinha.Repo.Migrations.CreateTransaction do
       add :descricao, :string, size: 10
       add :tipo, :char
       add :valor, :integer
-
-      timestamps()
+      add :realizada_em, :naive_datetime
     end
   end
 end

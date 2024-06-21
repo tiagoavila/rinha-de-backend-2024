@@ -11,6 +11,7 @@ defmodule Rinha.Application do
   @impl true
   def start(_type, _args) do
     ReleaseTasks.migrate()
+    http_port = String.to_integer(System.fetch_env!("HTTP_SERVER_PORT") || "4000")
 
     children = [
       # Starts a worker by calling: Rinha.Worker.start_link(arg)
@@ -18,7 +19,7 @@ defmodule Rinha.Application do
       Rinha.Repo,
       %{
         id: :elli,
-        start: {:elli, :start_link, [[callback: ElliCallback, port: 4000]]}
+        start: {:elli, :start_link, [[callback: ElliCallback, port: http_port]]}
       }
     ]
 

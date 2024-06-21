@@ -7,8 +7,8 @@ services:
     environment:
       POSTGRES_PASSWORD: postgres
       POSTGRES_DB: rinha_prod
-    ports:
-      - 24041:5432
+    #ports:
+      #- 24041:5432
     volumes:
       - rinha_volume:/var/lib/postgresql/data
     healthcheck:
@@ -19,8 +19,12 @@ services:
     deploy:
       restart_policy:
         condition: on-failure
+      resources:
+        limits:
+          cpus: '0.8'
+          memory: '150MB'
 
-  web:
+  api1:
     image: rinha_2024:latest
     deploy:
       restart_policy:
@@ -28,12 +32,56 @@ services:
         delay: 5s
         max_attempts: 3
         window: 120s
+      resources:
+        limits:
+          cpus: '0.275'
+          memory: '150MB'
     environment:
       DATABASE_URL: ecto://postgres:postgres@db/rinha_prod
+      ERL_MAX_PORTS: 2048
+      HTTP_SERVER_PORT: 4000
+      DB_CONNS: 200
     ports:
       - 4000:4000
     depends_on:
      - db
+
+  api2:
+    image: rinha_2024:latest
+    deploy:
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 3
+        window: 120s
+      resources:
+        limits:
+          cpus: '0.275'
+          memory: '150MB'
+    environment:
+      DATABASE_URL: ecto://postgres:postgres@db/rinha_prod
+      ERL_MAX_PORTS: 2048
+      HTTP_SERVER_PORT: 4001
+      DB_CONNS: 200
+    ports:
+      - 4001:4001
+    depends_on:
+     - api1
+
+  nginx:
+    image: nginx:latest
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+    depends_on:
+      - api1
+      - api2
+    ports:
+      - "9999:9999"
+    deploy:
+      resources:
+        limits:
+          cpus: '0.15'
+          memory: '100MB'
 
 volumes:
   rinha_volume:

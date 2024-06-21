@@ -70,7 +70,7 @@ defmodule Rinha.Customer do
     customer = Rinha.Repo.get(Rinha.Customer, customer_id)
     new_balance = transaction["valor"] + customer.saldo
 
-    save_transaction_to_db_async(customer, transaction)
+    Rinha.Transaction.save_transaction_to_db_async(customer, transaction)
     save_new_balance(customer, new_balance)
   end
 
@@ -83,7 +83,7 @@ defmodule Rinha.Customer do
         {:error, "Saldo inconsistente"}
 
       true ->
-        save_transaction_to_db_async(customer, transaction)
+        Rinha.Transaction.save_transaction_to_db_async(customer, transaction)
         save_new_balance(customer, new_balance)
     end
   end
@@ -100,18 +100,6 @@ defmodule Rinha.Customer do
       error ->
         error
     end
-  end
-
-  defp save_transaction_to_db_async(customer, transaction) do
-    Task.start(fn ->
-      Ecto.build_assoc(customer, :transacao, %{
-        descricao: transaction["descricao"],
-        tipo: transaction["tipo"],
-        valor: transaction["valor"],
-        realizada_em: NaiveDateTime.truncate(NaiveDateTime.utc_now(), :second)
-      })
-      |> Rinha.Repo.insert()
-    end)
   end
 
   defp do_get_statement(customer_id) do
